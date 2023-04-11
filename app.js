@@ -60,7 +60,8 @@ const handleJournals = async (mainArr, arr, attr, $) => {
             // sleep randomly 1-3s before coming to the next journal
             await new Promise(r => setTimeout(r, Math.floor((Math.random() * MAX_TIME_DELAY) + MIN_TIME_DELAY)));
         } catch (error) {
-            console.log('[INFO] => Error in journal happening', error);
+            console.log('[INFO] => Error in journal happening, skipping');
+            // console.log(error);
         }
     }
 }
